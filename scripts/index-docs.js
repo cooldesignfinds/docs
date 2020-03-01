@@ -41,11 +41,11 @@ async function main() {
     files = await globby([
       'dist/guides/**/*.html',
       'dist/docs/v2/**/*.html',
-      'dist/docs/api/v2/**/*.html',
-      'dist/docs/integrations/v2/**/*.html',
-      'dist/docs/now-cli/**/*.html',
-      'dist/docs/configuration/**/*.html',
-      'dist/docs/runtimes/**/*.html'
+      'dist/docs/api/v2.html',
+      'dist/docs/integrations.html',
+      'dist/docs/now-cli.html',
+      'dist/docs/configuration.html',
+      'dist/docs/runtimes.html'
     ])
     // filter out AMP pages
     files = files.filter(f => f.indexOf('.amp/index.html') < 0)
@@ -60,7 +60,7 @@ async function main() {
       !!file.startsWith('dist/docs/now-cli') ||
       !!file.startsWith('dist/docs/runtimes') ||
       !!file.startsWith('dist/docs/configuration') ||
-      !!file.startsWith('dist/docs/integrations/v2')
+      !!file.startsWith('dist/docs/integrations')
     const isDocs = !!file.startsWith('dist/docs/v2')
     const isGuides = !!file.startsWith('dist/guides')
 
